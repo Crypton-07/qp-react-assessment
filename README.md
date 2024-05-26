@@ -23,3 +23,7 @@ Kindly download the zip file:
 - go to file/ or place in your folder
 - open root folder in cmd and do :- npm i
 - After that kinldy write command :- npm run dev
+
+![image](https://github.com/Crypton-07/qp-react-assessment/assets/72659001/56dc528a-818a-4f94-a99c-0c732ea2caf8)
+![image](https://github.com/Crypton-07/qp-react-assessment/assets/72659001/4694e9e8-83de-4698-879a-bab41e19232a)
+
