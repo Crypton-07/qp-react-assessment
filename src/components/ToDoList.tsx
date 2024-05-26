@@ -127,7 +127,7 @@ export const ToDoList = () => {
   return (
     <>
       <ToastContainer />
-      <div title="todoForm" className="w-full">
+      <div role="todoForm" className="w-full">
         <div className="w-full border-2 border-gray-800 flex justify-center items-center shadow-lg rounded-md">
           <ToDoForm setTodo={setTodos} />
         </div>
@@ -214,7 +214,7 @@ export const ToDoList = () => {
             ))}
         </div>
       </div>
-      <div className="w-full" title="pagination">
+      <div className="w-full" role="pagination">
         <Pagination
           page={page}
           totalItemCount={todos.length}

@@ -52,8 +52,8 @@ describe("TodoForm", () => {
   describe("Todo List Items", () => {
     test("Todo List", async () => {
       render(<ToDoList />);
-      const todoForm = screen.getByTitle(/todoForm/);
-      const pagination = screen.getByTitle(/pagination/);
+      const todoForm = screen.getByRole("todoForm");
+      const pagination = screen.getByRole("pagination");
       expect(todoForm).toBeInTheDocument();
       expect(pagination).toBeInTheDocument();
     });
