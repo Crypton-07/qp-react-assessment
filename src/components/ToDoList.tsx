@@ -84,7 +84,7 @@ export const ToDoList = () => {
         <div className="w-full border-2 border-gray-800 flex justify-center items-center shadow-lg rounded-md">
           <ToDoForm setTodo={setTodos} />
         </div>
-        <div className="h-[65vh] lg:h-[60vh] w-full mt-4 overflow-y-auto">
+        <div className="h-[65vh] lg:h-[62vh] w-full mt-3 overflow-y-auto">
           {todoRecords &&
             todoRecords?.map((todo) => (
               <div
@@ -92,9 +92,9 @@ export const ToDoList = () => {
                 key={todo.id}
               >
                 {editTodoId === todo.id ? (
-                  <div className="flex items-center justify-center space-x-5 w-full px-1">
+                  <div className="flex items-center justify-center space-x-4 w-full px-1.5 py-2.5 lg:px-2.5 lg:py-1">
                     <input
-                      className="border-b-2 border-gray-900 focus:outline-none bg-transparent w-full px-1"
+                      className="border-b-2 border-gray-900 focus:outline-none bg-transparent w-full"
                       type="text"
                       role="textbox"
                       value={editTodoText}
@@ -105,7 +105,7 @@ export const ToDoList = () => {
                       <button
                         title="save"
                         role="button"
-                        className="mx-2 text-green-500 text-md"
+                        className=" text-green-500 text-md"
                         onClick={() => handleEditSave(todo.id)}
                       >
                         <FaCheck />
@@ -121,8 +121,8 @@ export const ToDoList = () => {
                     </button>
                   </div>
                 ) : (
-                  <div className="flex justify-between items-center space-x-2">
-                    <div>
+                  <div className="flex justify-between items-center space-x-2 px-1.5 py-2.5 lg:px-2.5 lg:py-1">
+                    <div className="flex items-center">
                       <input
                         className="h-[16px] w-[16px]"
                         type="checkbox"
