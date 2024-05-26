@@ -79,12 +79,12 @@ export const ToDoList = () => {
     }
   }, [page, todos.length, todoRecords.length]);
   return (
-    <>
+    <div className="max-h-screen w-full">
       <div role="todoForm" className="w-full">
         <div className="w-full border-2 border-gray-800 flex justify-center items-center shadow-lg rounded-md">
           <ToDoForm setTodo={setTodos} />
         </div>
-        <div className="h-[450px] w-full mt-4 overflow-y-auto">
+        <div className="h-[70vh] lg:h-[65vh] w-full mt-4 overflow-y-auto">
           {todoRecords &&
             todoRecords?.map((todo) => (
               <div
@@ -166,15 +166,15 @@ export const ToDoList = () => {
               </div>
             ))}
         </div>
+        <div className="w-full" role="pagination">
+          <Pagination
+            page={page}
+            totalItemCount={todos.length}
+            handlePagination={handlePagination}
+          />
+        </div>
       </div>
-      <div className="w-full" role="pagination">
-        <Pagination
-          page={page}
-          totalItemCount={todos.length}
-          handlePagination={handlePagination}
-        />
-      </div>
-    </>
+    </div>
   );
 };
 export const todoRecords = TodoService.getTodo();

@@ -19,9 +19,9 @@ const Pagination: React.FC<PropTypes> = ({
           title="prev"
           role="button"
           onClick={() => handlePagination(page > 1 ? page - 1 : page)}
-          className="relative inline-flex items-center rounded-md border border-gray-800 bg-white p-1 sm:px-2 sm:py-1 md:px-3 md:py-2 sm:text-sm text-xs font-medium text-gray-700 hover:bg-gray-100 cursor-pointer tracking-wide"
+          className="relative inline-flex items-center rounded-md border border-gray-800 bg-white py-2 px-3 sm:text-sm text-xs font-medium text-gray-700 hover:bg-gray-100 cursor-pointer tracking-wide"
         >
-          Previous
+          Prev
         </div>
         <>
           <p className="sm:text-sm text-xs text-gray-700 mx-1 capitalize">
@@ -43,7 +43,7 @@ const Pagination: React.FC<PropTypes> = ({
           title="next"
           role="button"
           onClick={() => handlePagination(page < totalPages ? page + 1 : page)}
-          className="relative ml-3 inline-flex items-center rounded-md border border-gray-800 bg-white px-2 py-1 md:px-3 md:py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer tracking-wide"
+          className="relative ml-3 inline-flex items-center rounded-md border border-gray-800 bg-white px-3 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer tracking-wide"
         >
           Next
         </div>
