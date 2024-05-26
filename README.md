@@ -26,4 +26,5 @@ Kindly download the zip file:
 
 ![image](https://github.com/Crypton-07/qp-react-assessment/assets/72659001/56dc528a-818a-4f94-a99c-0c732ea2caf8)
 ![image](https://github.com/Crypton-07/qp-react-assessment/assets/72659001/4694e9e8-83de-4698-879a-bab41e19232a)
-
+![image](https://github.com/Crypton-07/qp-react-assessment/assets/72659001/f20a842b-faee-4d63-ba49-db5eff3434f2)
+![image](https://github.com/Crypton-07/qp-react-assessment/assets/72659001/272014b1-4608-459c-a230-ce80415ffc41)
