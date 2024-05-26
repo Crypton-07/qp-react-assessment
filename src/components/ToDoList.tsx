@@ -84,7 +84,7 @@ export const ToDoList = () => {
         <div className="w-full border-2 border-gray-800 flex justify-center items-center shadow-lg rounded-md">
           <ToDoForm setTodo={setTodos} />
         </div>
-        <div className="h-[70vh] lg:h-[65vh] w-full mt-4 overflow-y-auto">
+        <div className="h-[65vh] lg:h-[60vh] w-full mt-4 overflow-y-auto">
           {todoRecords &&
             todoRecords?.map((todo) => (
               <div
