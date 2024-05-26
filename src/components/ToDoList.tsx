@@ -4,8 +4,6 @@ import TodoService, { ITEMS_PER__PAGE } from "../TodoService";
 import { FaCheck, FaEdit, FaTrash } from "react-icons/fa";
 import { GiCancel } from "react-icons/gi";
 import ToDoForm from "./ToDoForm";
-import { Bounce, ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Pagination from "./Pagination";
 
 export const ToDoList = () => {
@@ -35,34 +33,12 @@ export const ToDoList = () => {
       );
       setEditTodoId(null);
       setEditTodoText("");
-      toast.success("Todo Updated Successfully !!", {
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-      });
     }
   };
 
   const handleDeleteTodo = (id: number) => {
     TodoService.deleteTodo(id);
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
-    toast.success("Todo deleted !!", {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
   };
 
   const handleChange = (checked: boolean, id: number, text: string) => {
@@ -77,17 +53,6 @@ export const ToDoList = () => {
       );
       setEditTodoId(null);
       setEditTodoText("");
-      toast.info("Marked as completed !!", {
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-      });
     } else if (id && !checked) {
       const updateTodo = TodoService.updateTodos({
         id,
@@ -99,17 +64,6 @@ export const ToDoList = () => {
       );
       setEditTodoId(null);
       setEditTodoText("");
-      toast.warn("Marked as incompleted !!", {
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-      });
     }
   };
   const handlePagination = (page: number) => {
@@ -126,16 +80,15 @@ export const ToDoList = () => {
   }, [page, todos.length, todoRecords.length]);
   return (
     <>
-      <ToastContainer />
       <div role="todoForm" className="w-full">
         <div className="w-full border-2 border-gray-800 flex justify-center items-center shadow-lg rounded-md">
           <ToDoForm setTodo={setTodos} />
         </div>
-        <div className="h-[450px] w-full mt-6 overflow-y-auto">
+        <div className="h-[450px] w-full mt-4 overflow-y-auto">
           {todoRecords &&
             todoRecords?.map((todo) => (
               <div
-                className="flex items-center justify-between shadow-md border-2 my-3 py-3 px-3 transition-all ease-in duration-300"
+                className="flex items-center justify-between shadow-md border-2 my-2 md:my-3 py-2 px-2 md:py-3 md:px-3 transition-all ease-in duration-300"
                 key={todo.id}
               >
                 {editTodoId === todo.id ? (
@@ -182,7 +135,7 @@ export const ToDoList = () => {
                     <span
                       className={`${
                         todo.completed && "line-through"
-                      } font-medium text-md break-words w-80 md:w-full md: px-4`}
+                      } font-medium text-md break-words sm:w-72 md:w-full md: px-4`}
                     >
                       {todo.text}
                     </span>
