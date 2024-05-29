@@ -127,6 +127,7 @@ export const ToDoList = () => {
                         className="h-[16px] w-[16px]"
                         type="checkbox"
                         role="checkbox"
+                        checked={todo.completed}
                         onChange={(e) =>
                           handleChange(e.target.checked, todo.id, todo.text)
                         }
